@@ -1,12 +1,12 @@
 # Work Day Scheduler 
 
-# URL
+## URL
 
-# Description
+## Description
 
 a simple calendar application that allows a user to save events for each hour of the day. It runs in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-# User Story
+## User Story
 
 - AS AN employee with a busy schedule
 - I WANT to add important events to a daily planner
@@ -27,7 +27,7 @@ Acceptance Criteria
 - WHEN I refresh the page
 - THEN the saved events persist
 
-# Usage
+## Usage
 
 This workday calendar display work hours of the day 8AM - 5PM.
 On the top of the page, current day and date is diplayed.
