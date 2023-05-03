@@ -14,7 +14,7 @@ $(document).ready(function () {
       //Able to store locally 
       localStorage.setItem(time, text);
     }) 
-
+// TODO: Add code to apply the past, present, or future class to each time
     function timeTracker(){
       //current number of hours 
       var timeNow = dayjs().hour();
@@ -24,6 +24,18 @@ $(document).ready(function () {
         var blockTime = parseInt($(this).attr("id").split("hour"));
 
           if (blockTime < timeNow) {
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+          }
+
+          else if (blockTime === timeNow){
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+          }
+
+          else {
             $(this).removeClass("future");
             $(this).removeClass("present");
             $(this).removeClass("past");
