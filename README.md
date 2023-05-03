@@ -37,3 +37,4 @@ Once it saved, it will store in their local storage.
 This calendar is desktop and mobile compatible.
 
 
+<img width="1423" alt="image" src="https://user-images.githubusercontent.com/129316135/235980642-f017198e-a9e1-4dec-89f7-9f0f9ca89f30.png">
