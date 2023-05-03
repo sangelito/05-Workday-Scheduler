@@ -21,22 +21,22 @@ $(document).ready(function () {
 
       //loop over time blocks
       $(".time-block").each(function(){
-        var blockTime = parseInt($(this).attr("id").split("hour"));
+        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
 
           if (blockTime < timeNow) {
             $(this).removeClass("future");
             $(this).removeClass("present");
-            $(this).removeClass("past");
+            $(this).addClass("past");
           }
 
           else if (blockTime === timeNow){
             $(this).removeClass("future");
-            $(this).removeClass("present");
+            $(this).addClass("present");
             $(this).removeClass("past");
           }
 
           else {
-            $(this).removeClass("future");
+            $(this).addClass("future");
             $(this).removeClass("present");
             $(this).removeClass("past");
           }
