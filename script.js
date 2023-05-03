@@ -1,7 +1,7 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
-var todayDate = dayjs().format('dddd, MMM Do YYYY');
+var todayDate = dayjs().format('dddd, MMM DD YYYY');
 $("#currentDay").html(todayDate); 
 
 $(document).ready(function () {
@@ -10,9 +10,27 @@ $(document).ready(function () {
       // values from JQuery description 
       var text = $(this).siblings(".description").val();
       var time = $(this).parent().attr("id");
+      
       //Able to store locally 
       localStorage.setItem(time, text);
-    })
+    }) 
+
+    function timeTracker(){
+      //current number of hours 
+      var timeNow = dayjs().hour();
+
+      //loop over time blocks
+      $(".time-block").each(function(){
+        var blockTime = parseInt($(this).attr("id").split("hour"));
+
+          if (blockTime < timeNow) {
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+          }
+
+      })
+    }
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
