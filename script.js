@@ -40,9 +40,12 @@ $(document).ready(function () {
             $(this).removeClass("present");
             $(this).removeClass("past");
           }
-
       })
     }
+
+// Retrieve info from local storage 
+$("#hour-9 .description").val(localStorage.getItem("hour-9"));
+
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
   // function? How can DOM traversal be used to get the "hour-x" id of the
