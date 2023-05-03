@@ -45,6 +45,14 @@ $(document).ready(function () {
 
 // Retrieve info from local storage 
 $("#hour-9 .description").val(localStorage.getItem("hour-9"));
+$("#hour-10 .description").val(localStorage.getItem("hour-10"));
+$("#hour-11 .description").val(localStorage.getItem("hour-11"));
+$("#hour-12 .description").val(localStorage.getItem("hour-12"));
+$("#hour-01 .description").val(localStorage.getItem("hour-01"));
+$("#hour-02 .description").val(localStorage.getItem("hour-02"));
+$("#hour-03 .description").val(localStorage.getItem("hour-03"));
+$("#hour-04 .description").val(localStorage.getItem("hour-04"));
+$("#hour-05 .description").val(localStorage.getItem("hour-05"));
 
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
