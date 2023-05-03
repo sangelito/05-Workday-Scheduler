@@ -15,13 +15,15 @@ $(document).ready(function () {
       localStorage.setItem(time, text);
     }) 
 // TODO: Add code to apply the past, present, or future class to each time
-    function timeTracker(){
+    
+function timeTracker(){
       //current number of hours 
       var timeNow = dayjs().hour();
+        console.log("timeNow" + timeNow)
 
       //loop over time blocks
       $(".time-block").each(function(){
-        var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+        var blockTime = parseInt($(this).attr("id").split("-")[1]); 
 
           if (blockTime < timeNow) {
             $(this).removeClass("future");
@@ -42,17 +44,19 @@ $(document).ready(function () {
           }
       })
     }
+timeTracker()
 
 // Retrieve info from local storage 
 $("#hour-9 .description").val(localStorage.getItem("hour-9"));
 $("#hour-10 .description").val(localStorage.getItem("hour-10"));
 $("#hour-11 .description").val(localStorage.getItem("hour-11"));
 $("#hour-12 .description").val(localStorage.getItem("hour-12"));
-$("#hour-01 .description").val(localStorage.getItem("hour-01"));
-$("#hour-02 .description").val(localStorage.getItem("hour-02"));
-$("#hour-03 .description").val(localStorage.getItem("hour-03"));
-$("#hour-04 .description").val(localStorage.getItem("hour-04"));
-$("#hour-05 .description").val(localStorage.getItem("hour-05"));
+$("#hour-13 .description").val(localStorage.getItem("hour-13"));
+$("#hour-14 .description").val(localStorage.getItem("hour-14"));
+$("#hour-15 .description").val(localStorage.getItem("hour-15"));
+$("#hour-16 .description").val(localStorage.getItem("hour-16"));
+$("#hour-17 .description").val(localStorage.getItem("hour-17"));
+
 
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
